@@ -29,7 +29,7 @@ const User = db.define('user', {
     }
   },
   balance: {
-    type: Sequelize.DECIMAL(19,4),
+    type: Sequelize.DECIMAL(19,2),
     allowNull: false,
     defaultValue: 5000.00
   }
@@ -56,3 +56,5 @@ const setSaltPassword = user => {
 
 User.beforeCreate(setSaltPassword);
 User.beforeUpdate(setSaltPassword);
+
+module.exports = User;
