@@ -1,3 +1,5 @@
-const db = require('../index');
+const User = require('./user');
 
-module.exports = db;
+module.exports = {
+  User
+};

@@ -1,6 +1,6 @@
-const Sequelize = require('sequelize');
-const pkg = require('../../package.json');
+const db = require('./db');
 
-module.exports = new Sequelize(`postgres://localhost:5432/${pkg.name}`, {
-  logging: false
-});
+require('./models');
+
+module.exports = db;
+
